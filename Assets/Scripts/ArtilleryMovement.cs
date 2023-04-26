@@ -20,13 +20,11 @@ public class ArtilleryMovement : MonoBehaviour
     private void OnEnable()
     {
         _input.Enable();
-        Debug.Log("enable");
     }
 
     private void Update()
     {
         Vector2 direction = _input.Player.Move.ReadValue<Vector2>();
-        //Debug.Log(direction);
         Move(direction);
     }
 
