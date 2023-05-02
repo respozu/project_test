@@ -5,7 +5,7 @@ public class AnisoFilterSetting : MonoBehaviour
 {
     [SerializeField] private Dropdown _anisoFilterDropdown;
 
-    private void SetAnisoFilter(int index)
+    public void SetAnisoFilter(int index)
     {
         switch(index)
         {
