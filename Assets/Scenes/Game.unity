@@ -239,6 +239,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionPoint: {fileID: 1450884271}
   rotationSpeed: 10
+  kickDistance: 0.33
+  kickCheckOffset: 0.05
+  kickSpeed: 0.2
 --- !u!54 &40819901
 Rigidbody:
   m_ObjectHideFlags: 0

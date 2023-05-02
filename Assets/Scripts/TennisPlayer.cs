@@ -8,7 +8,12 @@ public class TennisPlayer : MonoBehaviour
 
     [SerializeField] private float rotationSpeed;
 
+    [SerializeField] private float kickDistance;
+    [SerializeField] private float kickCheckOffset;
+    [SerializeField] [Range(0f, 1f)] private float kickSpeed;
+
     private bool _isKicked;
+    private bool _canKick = true;
 
     private PlayerInput _input;
 
@@ -19,7 +24,7 @@ public class TennisPlayer : MonoBehaviour
     {
         _input = new PlayerInput();
 
-        _input.Player.Click.performed += context => StartKickCoroutine();
+        _input.Player.Click.performed += context => TryStartKickCoroutine();
 
         _startXPos = transform.position.x;
         _startZRot = transform.eulerAngles.z;
@@ -55,32 +60,47 @@ public class TennisPlayer : MonoBehaviour
 
 
 
-    private void StartKickCoroutine()
+    private void TryStartKickCoroutine()
     {
+        if (!_canKick) return;
         _isKicked = true;
         StartCoroutine(Kick());
+        _canKick = false;
     }
 
     private IEnumerator Kick()
     {
         Vector3 pos = transform.position;
-        float goingX = pos.x - 1;
+        float goingX = pos.x - kickDistance;
         while (_isKicked)
         {
-            pos.x = Mathf.Lerp(pos.x, goingX, 0.2f);
+            pos.x = Mathf.Lerp(pos.x, goingX, kickSpeed);
             transform.position = pos;
-            if (Mathf.Abs(transform.position.x - goingX) <= 0.1f) _isKicked = false; 
+            if (Mathf.Abs(transform.position.x - goingX) <= kickCheckOffset)
+            {
+                pos.x = goingX;
+                transform.position = pos;
+                _isKicked = false;
+            }
+
             yield return new WaitForFixedUpdate();
         }
         bool kickEnds = true;
-        float returningX = goingX + 1;
+        float returningX = goingX + kickDistance;
         while (kickEnds)
         {
-            pos.x = Mathf.Lerp(pos.x, returningX, 0.2f);
+            pos.x = Mathf.Lerp(pos.x, returningX, kickSpeed);
             transform.position = pos;
-            if (Mathf.Abs(transform.position.x - returningX) <= 0.1f) kickEnds = false;
+            if (Mathf.Abs(transform.position.x - returningX) <= kickCheckOffset)
+            {
+                pos.x = returningX;
+                transform.position = pos;
+                kickEnds = false;
+            }
+
             yield return new WaitForFixedUpdate();
         }
+        _canKick = true;
         yield return null;
     }
 }
