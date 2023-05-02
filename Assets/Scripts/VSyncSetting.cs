@@ -5,7 +5,7 @@ public class VSyncSetting : MonoBehaviour
 {
     [SerializeField] private Toggle vSyncToggle;
 
-    private void SetVSync(bool newvalue)
+    public void SetVSync(bool newvalue)
     {
         QualitySettings.vSyncCount = (newvalue ? 1 : 0);
     }
