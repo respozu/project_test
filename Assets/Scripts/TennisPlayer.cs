@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TennisPlayer : MonoBehaviour
@@ -17,7 +16,6 @@ public class TennisPlayer : MonoBehaviour
 
     private PlayerInput _input;
 
-    private float _startXPos;
     private float _startZRot;
 
     private void Awake()
@@ -26,7 +24,6 @@ public class TennisPlayer : MonoBehaviour
 
         _input.Player.Click.performed += context => TryStartKickCoroutine();
 
-        _startXPos = transform.position.x;
         _startZRot = transform.eulerAngles.z;
     }
 
@@ -38,8 +35,6 @@ public class TennisPlayer : MonoBehaviour
     private void Update()
     {
         TransformRacket();
-
-        
     }
 
     private void OnDisable()
