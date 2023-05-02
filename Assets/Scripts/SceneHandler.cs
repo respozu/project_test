@@ -8,12 +8,17 @@ public class SceneHandler : MonoBehaviour
     private const int GameSceneIndex = 1;
     private const int OptionsSceneIndex = 2;
 
-    public void StartGame()
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene(MainMenuSceneIndex);
+    }
+
+    public void LoadGame()
     {
         SceneManager.LoadScene(GameSceneIndex);
     }
 
-    public void OpenOptions()
+    public void LoadOptions()
     {
         SceneManager.LoadScene(OptionsSceneIndex);
     }
