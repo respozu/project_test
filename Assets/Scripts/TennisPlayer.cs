@@ -5,9 +5,11 @@ public class TennisPlayer : MonoBehaviour
 {
     [SerializeField] private GameObject directionPoint;
 
+    [SerializeField] private Vector2 racketYRotationBorder;
     [SerializeField] private Vector2 racketZRotationBorder;
 
-    [SerializeField] private float rotationSpeed;
+    [SerializeField] private float rotationYSpeed;
+    [SerializeField] private float rotationZSpeed;
 
     [SerializeField] private float kickDistance;
     [SerializeField] private float kickCheckOffset;
@@ -18,6 +20,7 @@ public class TennisPlayer : MonoBehaviour
 
     private PlayerInput _input;
 
+    private float _startYRot;
     private float _startZRot;
 
     private void Awake()
@@ -26,6 +29,7 @@ public class TennisPlayer : MonoBehaviour
 
         _input.Player.Click.performed += context => TryStartKickCoroutine();
 
+        _startYRot = transform.eulerAngles.y;
         _startZRot = transform.eulerAngles.z;
     }
 
@@ -54,11 +58,9 @@ public class TennisPlayer : MonoBehaviour
 
         transform.rotation = Quaternion.Euler
             (transform.eulerAngles.x,
-            transform.eulerAngles.y,
-            Mathf.Clamp(newPosition.z * rotationSpeed + _startZRot, racketZRotationBorder.x, racketZRotationBorder.y));
+            Mathf.Clamp(-newPosition.z * rotationYSpeed + _startYRot, racketYRotationBorder.x, racketYRotationBorder.y),
+            Mathf.Clamp(newPosition.z * rotationZSpeed + _startZRot, racketZRotationBorder.x, racketZRotationBorder.y));
     }
-
-
 
     private void TryStartKickCoroutine()
     {

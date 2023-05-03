@@ -22,8 +22,36 @@
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "K+M",
                     "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "UI",
+            "id": "4ca68f08-6b71-4179-850c-a904c0a27874",
+            "actions": [
+                {
+                    "name": "ESCPressed",
+                    "type": "Button",
+                    "id": "af0dc74f-4859-464d-bfc1-87b376b44701",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "700d23e4-289e-4bf1-809b-77a43fd1e212",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "K+M",
+                    "action": "ESCPressed",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
