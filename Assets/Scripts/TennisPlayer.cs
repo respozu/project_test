@@ -5,6 +5,8 @@ public class TennisPlayer : MonoBehaviour
 {
     [SerializeField] private GameObject directionPoint;
 
+    [SerializeField] private Vector2 racketZRotationBorder;
+
     [SerializeField] private float rotationSpeed;
 
     [SerializeField] private float kickDistance;
@@ -50,7 +52,10 @@ public class TennisPlayer : MonoBehaviour
 
         transform.position = newPositionWithoutX;
 
-        transform.rotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, newPosition.z * rotationSpeed + _startZRot);
+        transform.rotation = Quaternion.Euler
+            (transform.eulerAngles.x,
+            transform.eulerAngles.y,
+            Mathf.Clamp(newPosition.z * rotationSpeed + _startZRot, racketZRotationBorder.x, racketZRotationBorder.y));
     }
 
 
