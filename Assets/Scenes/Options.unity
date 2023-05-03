@@ -1348,7 +1348,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1621640688}
-        m_TargetAssemblyTypeName: Resolution, Assembly-CSharp
+        m_TargetAssemblyTypeName: Options, Assembly-CSharp
         m_MethodName: SetResolution
         m_Mode: 1
         m_Arguments:
@@ -2643,7 +2643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1434024633}
   - component: {fileID: 1434024632}
-  - component: {fileID: 1434024631}
+  - component: {fileID: 1434024634}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2651,25 +2651,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1434024631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1434024630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &1434024632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2700,6 +2681,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1434024634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434024630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
 --- !u!1 &1450272573
 GameObject:
   m_ObjectHideFlags: 0
@@ -2786,8 +2795,8 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1621640690}
-        m_TargetAssemblyTypeName: VSyncSetting, Assembly-CSharp
+      - m_Target: {fileID: 1621640688}
+        m_TargetAssemblyTypeName: Options, Assembly-CSharp
         m_MethodName: SetVSync
         m_Mode: 0
         m_Arguments:
@@ -2973,8 +2982,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1621640687}
   - component: {fileID: 1621640688}
-  - component: {fileID: 1621640689}
-  - component: {fileID: 1621640690}
   m_Layer: 0
   m_Name: QualitySettings
   m_TagString: Untagged
@@ -3006,35 +3013,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1621640685}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b5f383c3a97ac1409c7285006ed3fb5, type: 3}
+  m_Script: {fileID: 11500000, guid: cadd0273e3dcca343bcefc0ea78fa3e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   resolutionDropdown: {fileID: 0}
---- !u!114 &1621640689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621640685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 656fe1b2be7b90447b5fedf35418c370, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   _anisoFilterDropdown: {fileID: 0}
---- !u!114 &1621640690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621640685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a77f4fdbdf74334ebb0aa7c89679499, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   vSyncToggle: {fileID: 0}
 --- !u!1 &1671687067
 GameObject:
@@ -3814,8 +3797,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1621640689}
-        m_TargetAssemblyTypeName: AnisoFilterSetting, Assembly-CSharp
+      - m_Target: {fileID: 1621640688}
+        m_TargetAssemblyTypeName: Options, Assembly-CSharp
         m_MethodName: SetAnisoFilter
         m_Mode: 0
         m_Arguments:
