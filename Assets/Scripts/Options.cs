@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Options : MonoBehaviour
 {
-    [SerializeField] private Dropdown resolutionDropdown;
-    [SerializeField] private Dropdown _anisoFilterDropdown;
+    [SerializeField] private TMP_Dropdown resolutionDropdown;
+    [SerializeField] private TMP_Dropdown _anisoFilterDropdown;
     [SerializeField] private Toggle vSyncToggle;
 
     public void SetResolution()

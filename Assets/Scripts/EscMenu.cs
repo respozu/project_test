@@ -13,9 +13,13 @@ public class EscMenu : MonoBehaviour
         _input.UI.ESCPress.performed += context => TogglePanelActivness();
     }
 
+    private void OnEnable()
+    {
+        _input.Enable();
+    }
+
     private void TogglePanelActivness()
     {
         panel.SetActive(!panel.activeSelf);
     }
-
 }
