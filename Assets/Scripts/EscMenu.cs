@@ -10,25 +10,12 @@ public class EscMenu : MonoBehaviour
     private void Awake()
     {
         _input = new PlayerInput();
+        _input.UI.ESCPress.performed += context => TogglePanelActivness();
     }
 
-    private void Start()
+    private void TogglePanelActivness()
     {
-        panel.SetActive(false);
+        panel.SetActive(!panel.activeSelf);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (panel.activeSelf)
-            {
-                panel.SetActive(false);
-            }
-            else
-            {
-                panel.SetActive(true);
-            }
-        }
-    }
 }
