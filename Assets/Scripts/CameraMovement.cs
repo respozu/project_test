@@ -16,6 +16,6 @@ public class CameraMovement : MonoBehaviour
             (transform.position.x, 
             Mathf.Clamp(attachedTransform.position.y, cameraYPositionBorder.x, cameraYPositionBorder.y),
             Mathf.Clamp(attachedTransform.position.z, cameraZPositionBorder.x, cameraZPositionBorder.y));
-        transform.position = Vector3.Slerp(transform.position, newPosition, Time.deltaTime * speed);
+        transform.position = Vector3.Lerp(transform.position, newPosition, Time.deltaTime * speed);
     }
 }
