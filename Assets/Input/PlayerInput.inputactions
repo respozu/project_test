@@ -34,7 +34,7 @@
             "id": "4ca68f08-6b71-4179-850c-a904c0a27874",
             "actions": [
                 {
-                    "name": "ESCPressed",
+                    "name": "ESCPress",
                     "type": "Button",
                     "id": "af0dc74f-4859-464d-bfc1-87b376b44701",
                     "expectedControlType": "Button",
@@ -51,7 +51,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "K+M",
-                    "action": "ESCPressed",
+                    "action": "ESCPress",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
