@@ -2476,7 +2476,9 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: 1680x1050
       m_Image: {fileID: 0}
-    - m_Text: 1270x720
+    - m_Text: 1366x768
+      m_Image: {fileID: 0}
+    - m_Text: 1280x720
       m_Image: {fileID: 0}
     - m_Text: 800x600
       m_Image: {fileID: 0}
