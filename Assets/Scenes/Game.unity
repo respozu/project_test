@@ -265,6 +265,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3664531316457043258, guid: 82f4d92ab1baee14d9089a3283b818b6, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5319850205707447312, guid: 82f4d92ab1baee14d9089a3283b818b6, type: 3}
       propertyPath: directionPoint
       value: 
@@ -953,7 +957,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &807953995
 Transform:
   m_ObjectHideFlags: 0
@@ -1986,9 +1990,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 8862199824012275392, guid: e675f132a15d62d499b2ef345e2cbe5f, type: 3}
   spawnCooldown: 1
-  punishForce: 20
+  punishForce: 13
   ballLifeTime: 3
-  punishRandomCoefficient: 3
+  punishRandomCoefficient: 0.2
 --- !u!1 &1635838249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2114,7 +2118,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746648367}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: d5d1ed1bb0375cd4ca73c4baf5bdc46c, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

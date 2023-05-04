@@ -29,7 +29,7 @@ public class PunishedBallsSpawner : MonoBehaviour
                     Random.Range(-punishRandomCoefficient, punishRandomCoefficient),
                     Random.Range(-punishRandomCoefficient, punishRandomCoefficient),
                     Random.Range(-punishRandomCoefficient, punishRandomCoefficient));
-                rb.AddForce(ball.transform.forward * punishForce + directionRandomizer);
+                rb.AddForce((ball.transform.forward + directionRandomizer) * punishForce);
             }
         }
     }
