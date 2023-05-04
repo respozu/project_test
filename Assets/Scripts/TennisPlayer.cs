@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class TennisPlayer : MonoBehaviour
 {
     [SerializeField] private Vector2 racketYRotationBorder;
@@ -13,6 +14,8 @@ public class TennisPlayer : MonoBehaviour
     [SerializeField] private float kickCheckOffset;
     [SerializeField] [Range(0f, 1f)] private float kickSpeed;
 
+    private Rigidbody _rb;
+    
     private bool _isKicked;
     private bool _canKick = true;
 
@@ -23,11 +26,13 @@ public class TennisPlayer : MonoBehaviour
     {
         InputManager.SceneInput.Player.Click.performed += context => TryStartKickCoroutine();
 
+        _rb = GetComponent<Rigidbody>();
+        
         _startYRot = transform.eulerAngles.y;
         _startZRot = transform.eulerAngles.z;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         TransformRacket();
     }
@@ -38,12 +43,10 @@ public class TennisPlayer : MonoBehaviour
 
         Vector3 newPositionWithoutX = new Vector3(transform.position.x, newPosition.y, newPosition.z);
 
-        transform.position = newPositionWithoutX;
-
-        transform.rotation = Quaternion.Euler
+        _rb.Move(newPositionWithoutX, Quaternion.Euler
             (transform.eulerAngles.x,
             Mathf.Clamp(-newPosition.z * rotationYSpeed + _startYRot, racketYRotationBorder.x, racketYRotationBorder.y),
-            Mathf.Clamp(newPosition.z * rotationZSpeed + _startZRot, racketZRotationBorder.x, racketZRotationBorder.y));
+            Mathf.Clamp(newPosition.z * rotationZSpeed + _startZRot, racketZRotationBorder.x, racketZRotationBorder.y)));
     }
 
     private void TryStartKickCoroutine()
