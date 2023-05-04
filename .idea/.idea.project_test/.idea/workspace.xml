@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5c0d5ad-8f4a-40fc-aad4-613a0f09a780" name="Default Changelist" comment="" />
+    <list default="true" id="a5c0d5ad-8f4a-40fc-aad4-613a0f09a780" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TennisPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TennisPlayer.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

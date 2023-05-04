@@ -19,7 +19,7 @@ public class TennisPlayer : MonoBehaviour
     private float _startYRot;
     private float _startZRot;
 
-    private void Awake()
+    private void Start()
     {
         InputManager.SceneInput.Player.Click.performed += context => TryStartKickCoroutine();
 
