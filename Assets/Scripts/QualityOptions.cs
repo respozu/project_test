@@ -11,17 +11,12 @@ public class QualityOptions : MonoBehaviour
     [SerializeField] private TMP_Dropdown shadowsResolutionDropdown;
     [SerializeField] private TMP_Dropdown displayModeDropdown;
 
-    private string resolutionKey = "resolution";
-    private string anisoFilterKey = "anisoFilter";
-    private string vSyncKey = "vSync";
-    private string msaaKey = "msaa";
-    private string shadowResKey = "shadowResolution";
-    private string displayModeKey = "displayMode";
-
-    private void Start()
-    {
-        LoadOptions();
-    }
+    public static readonly string ResolutionKey = "resolution";
+    public static readonly string AnisoFilterKey = "anisoFilter";
+    public static readonly string VSyncKey = "vSync";
+    public static readonly string MSAAKey = "msaa";
+    public static readonly string ShadowResKey = "shadowResolution";
+    public static readonly string DisplayModeKey = "displayMode";
 
     public void SetResolution()
     {
@@ -35,7 +30,7 @@ public class QualityOptions : MonoBehaviour
 
         Screen.SetResolution(width, height, Screen.fullScreen);
 
-        PlayerPrefs.SetInt(resolutionKey, selectedIndex);
+        PlayerPrefs.SetInt(ResolutionKey, selectedIndex);
     }
 
 
@@ -56,7 +51,7 @@ public class QualityOptions : MonoBehaviour
                 break;
         }
 
-        PlayerPrefs.SetInt(anisoFilterKey, index);
+        PlayerPrefs.SetInt(AnisoFilterKey, index);
     }
 
 
@@ -64,7 +59,7 @@ public class QualityOptions : MonoBehaviour
     {
         QualitySettings.vSyncCount = (newvalue ? 1 : 0);
 
-        PlayerPrefs.SetInt(vSyncKey, (newvalue ? 1 : 0));
+        PlayerPrefs.SetInt(VSyncKey, (newvalue ? 1 : 0));
     }
 
     public void SetMSAA(int index)
@@ -85,7 +80,7 @@ public class QualityOptions : MonoBehaviour
                 break;
         }
 
-        PlayerPrefs.SetInt(msaaKey, index);
+        PlayerPrefs.SetInt(MSAAKey, index);
     }
 
     public void SetShadowResolution(int index)
@@ -106,7 +101,7 @@ public class QualityOptions : MonoBehaviour
                 break;
         }
 
-        PlayerPrefs.SetInt(shadowResKey, index);
+        PlayerPrefs.SetInt(ShadowResKey, index);
     }
 
     public void SetDisplayMode(int index)
@@ -124,17 +119,6 @@ public class QualityOptions : MonoBehaviour
                 break;
         }
 
-        PlayerPrefs.SetInt(displayModeKey, index);
-    }
-
-    private void LoadOptions()
-    {
-        int resolutionIndex = PlayerPrefs.GetInt(resolutionKey, 0);
-        int anisoFilterIndex = PlayerPrefs.GetInt(anisoFilterKey, 1);
-        bool vSync = PlayerPrefs.GetInt(vSyncKey, 1) == 1 ? true : false;
-        int msaaIndex = PlayerPrefs.GetInt(msaaKey, 1);
-        int shadowResIndex = PlayerPrefs.GetInt(shadowResKey, 2);
-        int displayModeIndex = PlayerPrefs.GetInt(displayModeKey, 0);
-
+        PlayerPrefs.SetInt(DisplayModeKey, index);
     }
 }
