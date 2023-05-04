@@ -2,11 +2,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Options : MonoBehaviour
+public class QualityOptions : MonoBehaviour
 {
     [SerializeField] private TMP_Dropdown resolutionDropdown;
     [SerializeField] private TMP_Dropdown _anisoFilterDropdown;
     [SerializeField] private Toggle vSyncToggle;
+    [SerializeField] private TMP_Dropdown msaaDropdown;
+    [SerializeField] private TMP_Dropdown shadowsResolutionDropdown;
 
     public void SetResolution()
     {
@@ -45,5 +47,46 @@ public class Options : MonoBehaviour
     public void SetVSync(bool newvalue)
     {
         QualitySettings.vSyncCount = (newvalue ? 1 : 0);
+    }
+
+    public void SetMSAA(int index)
+    {
+        switch(index)
+        {
+            case 0:
+                QualitySettings.antiAliasing = 0;
+                break;
+            case 1:
+                QualitySettings.antiAliasing = 2;
+                break;
+            case 2:
+                QualitySettings.antiAliasing = 4;
+                    break;
+            case 3:
+                QualitySettings.antiAliasing = 8;
+                break;
+
+
+        }
+    }
+
+    public void SetShadowResolution(int index)
+    {
+        switch(index)
+        {
+            case 0:
+                QualitySettings.shadowResolution = ShadowResolution.Low;
+                break;
+            case 1:
+                QualitySettings.shadowResolution = ShadowResolution.Medium;
+                break;
+            case 2:
+                QualitySettings.shadowResolution = ShadowResolution.High;
+                break;
+            case 3:
+                QualitySettings.shadowResolution = ShadowResolution.VeryHigh;
+                break;
+            
+        }
     }
 }
