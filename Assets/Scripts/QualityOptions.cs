@@ -9,6 +9,7 @@ public class QualityOptions : MonoBehaviour
     [SerializeField] private Toggle vSyncToggle;
     [SerializeField] private TMP_Dropdown msaaDropdown;
     [SerializeField] private TMP_Dropdown shadowsResolutionDropdown;
+    [SerializeField] private TMP_Dropdown displayModeDropdown;
 
     public void SetResolution()
     {
@@ -87,6 +88,22 @@ public class QualityOptions : MonoBehaviour
                 QualitySettings.shadowResolution = ShadowResolution.VeryHigh;
                 break;
             
+        }
+    }
+
+    public void SetDisplayMode(int index)
+    {
+        switch(index)
+        {
+            case 0:
+                Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+                break;
+            case 1:
+                Screen.fullScreenMode = FullScreenMode.Windowed;
+                break;
+            case 2:
+                Screen.fullScreenMode = FullScreenMode.MaximizedWindow;
+                break;
         }
     }
 }
