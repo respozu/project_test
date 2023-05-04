@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
     private void Awake()
     {
         SceneInput = new PlayerInput();
+        SceneInput.Enable();
     }
 
     private void OnEnable()

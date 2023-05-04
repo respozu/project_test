@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class TennisPlayer : MonoBehaviour
 {
-    [SerializeField] private GameObject directionPoint;
-
     [SerializeField] private Vector2 racketYRotationBorder;
     [SerializeField] private Vector2 racketZRotationBorder;
 
@@ -18,36 +16,22 @@ public class TennisPlayer : MonoBehaviour
     private bool _isKicked;
     private bool _canKick = true;
 
-    private PlayerInput _input;
-
     private float _startYRot;
     private float _startZRot;
 
     private void Awake()
     {
-        _input = new PlayerInput();
-
-        _input.Player.Click.performed += context => TryStartKickCoroutine();
+        InputManager.SceneInput.Player.Click.performed += context => TryStartKickCoroutine();
 
         _startYRot = transform.eulerAngles.y;
         _startZRot = transform.eulerAngles.z;
-    }
-
-    private void OnEnable()
-    {
-        _input.Enable();
     }
 
     private void Update()
     {
         TransformRacket();
     }
-
-    private void OnDisable()
-    {
-        _input.Disable();
-    }
-
+    
     private void TransformRacket()
     {
         Vector3 newPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1));
