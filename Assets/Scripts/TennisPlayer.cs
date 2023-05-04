@@ -4,11 +4,11 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class TennisPlayer : MonoBehaviour
 {
+    [SerializeField] private Vector2 racketXRotationBorder;
     [SerializeField] private Vector2 racketYRotationBorder;
     [SerializeField] private Vector2 racketZRotationBorder;
 
-    [SerializeField] private float rotationYSpeed;
-    [SerializeField] private float rotationZSpeed;
+    [SerializeField] private Vector3 rotationSpeed;
 
     [SerializeField] private float kickDistance;
     [SerializeField] private float kickCheckOffset;
@@ -19,6 +19,9 @@ public class TennisPlayer : MonoBehaviour
     private bool _isKicked;
     private bool _canKick = true;
 
+    private float _startYPos;
+
+    private float _startXRot;
     private float _startYRot;
     private float _startZRot;
 
@@ -27,7 +30,10 @@ public class TennisPlayer : MonoBehaviour
         InputManager.SceneInput.Player.Click.performed += context => TryStartKickCoroutine();
 
         _rb = GetComponent<Rigidbody>();
-        
+
+        _startYPos = transform.position.y;
+
+        _startXRot = transform.eulerAngles.x;
         _startYRot = transform.eulerAngles.y;
         _startZRot = transform.eulerAngles.z;
     }
@@ -43,10 +49,10 @@ public class TennisPlayer : MonoBehaviour
 
         Vector3 newPositionWithoutX = new Vector3(transform.position.x, newPosition.y, newPosition.z);
 
-        _rb.Move(newPositionWithoutX, Quaternion.Euler
-            (transform.eulerAngles.x,
-            Mathf.Clamp(-newPosition.z * rotationYSpeed + _startYRot, racketYRotationBorder.x, racketYRotationBorder.y),
-            Mathf.Clamp(newPosition.z * rotationZSpeed + _startZRot, racketZRotationBorder.x, racketZRotationBorder.y)));
+        _rb.Move(newPositionWithoutX, Quaternion.Euler(
+            Mathf.Clamp((-newPosition.y + _startYPos) * rotationSpeed.x + _startXRot, racketXRotationBorder.x, racketXRotationBorder.y),
+            Mathf.Clamp(-newPosition.z * rotationSpeed.y + _startYRot, racketYRotationBorder.x, racketYRotationBorder.y),
+            Mathf.Clamp(newPosition.z * rotationSpeed.z + _startZRot, racketZRotationBorder.x, racketZRotationBorder.y)));
     }
 
     private void TryStartKickCoroutine()

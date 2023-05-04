@@ -20,8 +20,8 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/InputManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EscMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TennisPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PunishedBallsSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TennisPlayer.cs" />
       </list>
     </option>
   </component>
