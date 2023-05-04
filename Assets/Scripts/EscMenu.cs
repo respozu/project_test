@@ -6,7 +6,7 @@ public class EscMenu : MonoBehaviour
 {
     [SerializeField] private GameObject panel;
 
-    private void Awake()
+    private void Start()
     {
         InputManager.SceneInput.UI.ESCPress.performed += context => TogglePanelActivness();
     }
