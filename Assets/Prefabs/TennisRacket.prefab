@@ -98,11 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dccfa10ef8fe2c4db7570d55ce5f954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionPoint: {fileID: 0}
+  FocusedObject: {fileID: 0}
+  racketXRotationBorder: {x: 0, y: 0}
   racketYRotationBorder: {x: 70, y: 110}
   racketZRotationBorder: {x: 40, y: 140}
-  rotationYSpeed: 10
-  rotationZSpeed: 10
+  rotationSpeed: {x: 0, y: 0, z: 0}
   kickDistance: 0.33
   kickCheckOffset: 0.05
   kickSpeed: 0.2
@@ -114,12 +114,12 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8462423155003651795}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 1
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
 --- !u!64 &8062925691438279425

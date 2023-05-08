@@ -1,9 +1,9 @@
 using System.Collections;
-using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class PunishedBallsSpawner : MonoBehaviour
 {
+    [SerializeField] private TennisPlayer player;
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private float spawnCooldown;
     [SerializeField] private float punishForce;
@@ -30,6 +30,8 @@ public class PunishedBallsSpawner : MonoBehaviour
                     Random.Range(-punishRandomCoefficient, punishRandomCoefficient),
                     Random.Range(-punishRandomCoefficient, punishRandomCoefficient));
                 rb.AddForce((ball.transform.forward + directionRandomizer) * punishForce);
+
+                player.FocusedObject = ball;
             }
         }
     }
