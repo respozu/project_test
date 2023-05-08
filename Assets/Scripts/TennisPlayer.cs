@@ -4,6 +4,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class TennisPlayer : MonoBehaviour
 {
+    public GameObject FocusedObject;
+    
     [SerializeField] private Vector2 racketXRotationBorder;
     [SerializeField] private Vector2 racketYRotationBorder;
     [SerializeField] private Vector2 racketZRotationBorder;
@@ -46,7 +48,7 @@ public class TennisPlayer : MonoBehaviour
     private void TransformRacket()
     {
         Vector3 newPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1));
-
+        
         Vector3 newPositionWithoutX = new Vector3(transform.position.x, newPosition.y, newPosition.z);
 
         _rb.Move(newPositionWithoutX, Quaternion.Euler(
@@ -60,11 +62,11 @@ public class TennisPlayer : MonoBehaviour
         if (!_canKick) return;
         _isKicked = true;
         StartCoroutine(Kick());
-        _canKick = false;
     }
 
     private IEnumerator Kick()
     {
+        _canKick = false;
         Vector3 pos = transform.position;
         float goingX = pos.x - kickDistance;
         while (_isKicked)

@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 4dc16a06622c11545a3f4a38bbc70d64, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: b98198af9265a2c4a8734081a2fb11a3, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -275,7 +275,7 @@ PrefabInstance:
       objectReference: {fileID: 1450884271}
     - target: {fileID: 5319850205707447312, guid: 82f4d92ab1baee14d9089a3283b818b6, type: 3}
       propertyPath: rotationSpeed.x
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5319850205707447312, guid: 82f4d92ab1baee14d9089a3283b818b6, type: 3}
       propertyPath: rotationSpeed.y
@@ -327,7 +327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9095936073350524009, guid: 82f4d92ab1baee14d9089a3283b818b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 9095936073350524009, guid: 82f4d92ab1baee14d9089a3283b818b6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -451,6 +451,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &335368768 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5319850205707447312, guid: 82f4d92ab1baee14d9089a3283b818b6, type: 3}
+  m_PrefabInstance: {fileID: 19259688}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335368765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dccfa10ef8fe2c4db7570d55ce5f954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &348886312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,7 +1449,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 77
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2118,6 +2129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99036d6e1e4b13e45bb16881b1c19d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 335368768}
   ballPrefab: {fileID: 8862199824012275392, guid: e675f132a15d62d499b2ef345e2cbe5f, type: 3}
   spawnCooldown: 1
   punishForce: 13

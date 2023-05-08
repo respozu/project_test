@@ -16,10 +16,16 @@
           <e p="InputManager.cs" t="Include" />
           <e p="ObjectDestroyer.cs" t="Include" />
           <e p="PunishedBallsSpawner.cs" t="Include" />
-          <e p="QualityOptions.cs" t="Include" />
+          <e p="QualityOptions" t="Include">
+            <e p="QualityChanger.cs" t="Include" />
+            <e p="QualityOptions.cs" t="Include" />
+            <e p="QualityOptionsLoader.cs" t="Include" />
+            <e p="QualityOptionsSaver.cs" t="Include" />
+          </e>
           <e p="RecordCounter.cs" t="Include" />
           <e p="RecordResetter.cs" t="Include" />
           <e p="SceneHandler.cs" t="Include" />
+          <e p="StartOptions.cs" t="Include" />
           <e p="TennisPlayer.cs" t="Include" />
           <e p="TopSecret.cs" t="Include" />
         </e>
