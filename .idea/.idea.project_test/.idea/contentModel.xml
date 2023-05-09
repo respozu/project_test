@@ -22,11 +22,14 @@
             <e p="QualityOptionsLoader.cs" t="Include" />
             <e p="QualityOptionsSaver.cs" t="Include" />
           </e>
+          <e p="RacketPlayer.cs" t="Include" />
           <e p="RecordCounter.cs" t="Include" />
           <e p="RecordResetter.cs" t="Include" />
           <e p="SceneHandler.cs" t="Include" />
           <e p="StartOptions.cs" t="Include" />
+          <e p="TennisBallSoundHandler.cs" t="Include" />
           <e p="TennisPlayer.cs" t="Include" />
+          <e p="TennisRacket.cs" t="Include" />
           <e p="TopSecret.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">

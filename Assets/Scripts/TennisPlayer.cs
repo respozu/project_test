@@ -50,7 +50,7 @@ public class TennisPlayer : MonoBehaviour
         Vector3 newPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1));
         
         Vector3 newPositionWithoutX = new Vector3(transform.position.x, newPosition.y, newPosition.z);
-
+        
         _rb.Move(newPositionWithoutX, Quaternion.Euler(
             Mathf.Clamp((-newPosition.y + _startYPos) * rotationSpeed.x + _startXRot, racketXRotationBorder.x, racketXRotationBorder.y),
             Mathf.Clamp(-newPosition.z * rotationSpeed.y + _startYRot, racketYRotationBorder.x, racketYRotationBorder.y),
