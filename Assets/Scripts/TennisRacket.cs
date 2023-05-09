@@ -9,7 +9,6 @@ public class TennisRacket : MonoBehaviour
     [SerializeField] private Vector2 yRotationBorders;
     [SerializeField] private Vector2 zRotationBorders;
 
-    private Vector3 _startPos;
     private Vector3 _startRot;
     
     private Rigidbody _rb;
@@ -18,7 +17,6 @@ public class TennisRacket : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
         
-        _startPos = transform.position;
         _startRot = transform.eulerAngles;
     }
 
