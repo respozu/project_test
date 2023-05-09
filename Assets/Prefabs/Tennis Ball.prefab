@@ -126,7 +126,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 620fe743c3adaad41954f77638bef88c, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -296,3 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1af33e53422045448e486dcf75b39a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultHitSound: {fileID: 8300000, guid: 620fe743c3adaad41954f77638bef88c, type: 3}
+  defaultKickSoundPitchRandom: {x: 0.9, y: 1.1}
+  racketKickSoundPitchRandom: {x: 0.9, y: 1}
+  kickSoundCooldowm: 0.15

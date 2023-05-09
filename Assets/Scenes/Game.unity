@@ -1532,10 +1532,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26c65a5a60eb1b44194e8b2e62b792de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: {x: 10, y: 10, z: 10}
-  xRotationBorders: {x: -20, y: 20}
-  yRotationBorders: {x: 160, y: 200}
-  zRotationBorders: {x: -20, y: 20}
 --- !u!114 &949120224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1548,6 +1544,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2386b693615afae43b057418bf6aff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: {x: 10, y: 10, z: 10}
+  xRotationBorders: {x: -20, y: 20}
+  yRotationBorders: {x: 160, y: 200}
+  zRotationBorders: {x: -15, y: 15}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

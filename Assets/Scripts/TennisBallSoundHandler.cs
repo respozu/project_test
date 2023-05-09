@@ -4,8 +4,12 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class TennisBallSoundHandler : MonoBehaviour
 {
-    [SerializeField] private AudioClip defaulthitSound;
-    [SerializeField] private AudioClip racketHitSound;
+    [SerializeField] private AudioClip defaultHitSound;
+
+    [SerializeField] private Vector2 defaultKickSoundPitchRandom;
+    [SerializeField] private Vector2 racketKickSoundPitchRandom;
+
+    [SerializeField] private float kickSoundCooldowm;
 
     private AudioSource _audioSource;
     private bool _canPlaySound = true;
@@ -17,27 +21,29 @@ public class TennisBallSoundHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (_canPlaySound)
+        if (!_canPlaySound) return;
+        
+        float pitch = Random.Range(defaultKickSoundPitchRandom.x, defaultKickSoundPitchRandom.y);
+        _audioSource.pitch = pitch;
+        
+        if (collision.gameObject.TryGetComponent<TennisRacket>(out TennisRacket racket))
         {
-            float pitch = Random.Range(0.9f, 1.1f);
+            pitch = Random.Range(racketKickSoundPitchRandom.x, racketKickSoundPitchRandom.y);
             _audioSource.pitch = pitch;
-            if (collision.gameObject.TryGetComponent<TennisRacket>(out TennisRacket racket))  
-            {
-                _audioSource.PlayOneShot(racketHitSound);
-            }
-            else
-            {
-                _audioSource.Play();
-                _canPlaySound = false;
-                StartCoroutine(KickSoundCooldown());
-            }
+            _audioSource.PlayOneShot(defaultHitSound);
+        }
+        else
+        {
+            _audioSource.PlayOneShot(defaultHitSound);
         }
 
+        _canPlaySound = false;
+        StartCoroutine(KickSoundCooldown());
     }
 
     IEnumerator KickSoundCooldown()
     {
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(kickSoundCooldowm);
         _canPlaySound = true;
     }
 }
