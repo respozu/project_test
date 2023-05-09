@@ -4,6 +4,9 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class TennisBallSoundHandler : MonoBehaviour
 {
+    [SerializeField] private AudioClip defaulthitSound;
+    [SerializeField] private AudioClip racketHitSound;
+
     private AudioSource _audioSource;
     private bool _canPlaySound = true;
 
@@ -18,9 +21,16 @@ public class TennisBallSoundHandler : MonoBehaviour
         {
             float pitch = Random.Range(0.9f, 1.1f);
             _audioSource.pitch = pitch;
-            _audioSource.Play();
-            _canPlaySound = false;
-            StartCoroutine(KickSoundCooldown());
+            if (collision.gameObject.)
+            {
+                _audioSource.PlayOneShot(racketHitSound);
+            }
+            else
+            {
+                _audioSource.Play();
+                _canPlaySound = false;
+                StartCoroutine(KickSoundCooldown());
+            }
         }
 
     }
@@ -31,5 +41,3 @@ public class TennisBallSoundHandler : MonoBehaviour
         _canPlaySound = true;
     }
 }
-
-
