@@ -20,38 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5c0d5ad-8f4a-40fc-aad4-613a0f09a780" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.project_test/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.project_test/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.project_test/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.project_test/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.project_test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.project_test/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Physic Materials/Tennis Ball.physicMaterial" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Physic Materials/Tennis Ball.physicMaterial.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Physic Materials/Tennis Racket.physicMaterial" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Physic Materials/Tennis Racket.physicMaterial.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Physic Materials/Tennis Table.physicMaterial" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Physic Materials/Tennis Table.physicMaterial.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tennis Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tennis Ball.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EscMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EscMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RacketPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RacketPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RacketPlayer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RacketPlayer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TennisRacket.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TennisRacket.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Materials/ball.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Materials/ball.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Materials/ground.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Materials/ground.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Materials/table.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/Materials/table.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/ball.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/ball.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/ground.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/ground.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/table.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Texture/table.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TennisRacket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TennisRacket.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,13 +59,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PunishedBallsSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TennisPlayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TennisRacket.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RacketPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TennisBallSoundHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameRulesHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TennisBall.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TennisTable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EscMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TennisRacket.cs" />
       </list>
     </option>
   </component>
@@ -155,6 +126,7 @@
       <workItem from="1683650309324" duration="15477000" />
       <workItem from="1683705263835" duration="621000" />
       <workItem from="1683795307290" duration="11440000" />
+      <workItem from="1683918776681" duration="2887000" />
     </task>
     <servers />
   </component>
