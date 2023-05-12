@@ -12,7 +12,7 @@ public class RacketPlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 cameraInput = Camera.current.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1));
+        Vector3 cameraInput = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1));
         
         Vector3 newPosition = new Vector3(transform.position.x, cameraInput.y, cameraInput.z);
         

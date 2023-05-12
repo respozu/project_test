@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 8862199824012275399}
   - component: {fileID: 8862199824012275398}
   - component: {fileID: 8862199824012275393}
-  - component: {fileID: 1368639002178667088}
+  - component: {fileID: -1851942264681107616}
   - component: {fileID: 5248931283563670585}
+  - component: {fileID: 1368639002178667088}
   m_Layer: 0
   m_Name: Tennis Ball
   m_TagString: TennisBall
@@ -35,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8862199824012275396
 MeshFilter:
@@ -116,6 +117,36 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &-1851942264681107616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8862199824012275392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bbd2f65d6bedef4e9b49d26c75f885a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftSide: {fileID: 13400000, guid: d5d1ed1bb0375cd4ca73c4baf5bdc46c, type: 2}
+  rightSide: {fileID: 13400000, guid: e527513e0e84f2e438f067274c06b1fc, type: 2}
+--- !u!114 &5248931283563670585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8862199824012275392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1af33e53422045448e486dcf75b39a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultHitSound: {fileID: 8300000, guid: 620fe743c3adaad41954f77638bef88c, type: 3}
+  defaultKickSoundPitchRandom: {x: 0.9, y: 1.1}
+  racketKickSoundPitchRandom: {x: 0.9, y: 1}
+  kickSoundCooldowm: 0.15
 --- !u!82 &1368639002178667088
 AudioSource:
   m_ObjectHideFlags: 0
@@ -284,19 +315,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5248931283563670585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8862199824012275392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1af33e53422045448e486dcf75b39a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultHitSound: {fileID: 8300000, guid: 620fe743c3adaad41954f77638bef88c, type: 3}
-  defaultKickSoundPitchRandom: {x: 0.9, y: 1.1}
-  racketKickSoundPitchRandom: {x: 0.9, y: 1}
-  kickSoundCooldowm: 0.15

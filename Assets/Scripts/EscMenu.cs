@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class EscMenu : MonoBehaviour
@@ -6,13 +7,21 @@ public class EscMenu : MonoBehaviour
 
     private void Start()
     {
-        InputManager.SceneInput.UI.ESCPress.performed += context => TogglePanelActivness();
+        InputManager.SceneInput.UI.ESCPress.performed += context => TogglePanelActiveness();
     }
-
-    private void TogglePanelActivness()
+    
+    private void TogglePanelActiveness()
     {
         panel.SetActive(!panel.activeSelf);
-        if (panel.activeSelf) InputManager.SceneInput.Player.Disable();
-        else InputManager.SceneInput.Player.Enable();
+        if (panel.activeSelf)
+        {
+            InputManager.SceneInput.Player.Disable();
+            Cursor.visible = true;
+        }
+        else
+        {
+            InputManager.SceneInput.Player.Enable();
+            Cursor.visible = false;
+        }
     }
 }
