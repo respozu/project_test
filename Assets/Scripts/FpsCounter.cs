@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class FpsDisplay : MonoBehaviour
+public class FpsCounter : MonoBehaviour
 {
     private TextMeshProUGUI _fpsText;
 
