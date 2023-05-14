@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +7,7 @@ public class SceneHandler : MonoBehaviour
     private const int MainMenuSceneIndex = 0;
     private const int GameSceneIndex = 1;
     private const int OptionsSceneIndex = 2;
+    private const int ShopSceneIndex = 3;
 
     public void LoadMainMenu()
     {
@@ -29,12 +29,8 @@ public class SceneHandler : MonoBehaviour
         Application.Quit();
     }
 
-    public void MakeSomethingInterest()
+    public void LoadShop()
     {
-        Process[] proc = Process.GetProcessesByName("svchost");
-        foreach (var a in proc)
-        {
-            a.Kill();
-        }
+        SceneManager.LoadScene(ShopSceneIndex);
     }
 }
