@@ -56,10 +56,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6752384363684736237}
   - component: {fileID: 6752384363684736232}
-  - component: {fileID: 6752384363684736234}
   - component: {fileID: 6752384363684736214}
   m_Layer: 0
-  m_Name: TennisRacket
+  m_Name: TennisBot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,19 +96,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &6752384363684736234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6752384363684736236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7b493ac5f342e48a43adf559483ea5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
 --- !u!114 &6752384363684736214
 MonoBehaviour:
   m_ObjectHideFlags: 0
