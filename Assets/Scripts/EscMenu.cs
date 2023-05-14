@@ -1,25 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class EscMenu : MonoBehaviour
 {
     [SerializeField] private GameObject panel;
-    private PlayerInput _input;
 
-    private void Awake()
+    private void Start()
     {
-        _input = new PlayerInput();
-        _input.UI.ESCPress.performed += context => TogglePanelActivness();
+        InputManager.SceneInput.UI.ESCPress.performed += context => TogglePanelActiveness();
     }
-
-    private void OnEnable()
-    {
-        _input.Enable();
-    }
-
-    private void TogglePanelActivness()
+    
+    private void TogglePanelActiveness()
     {
         panel.SetActive(!panel.activeSelf);
+        if (panel.activeSelf)
+        {
+            InputManager.SceneInput.Player.Disable();
+            Cursor.visible = true;
+        }
+        else
+        {
+            InputManager.SceneInput.Player.Enable();
+            Cursor.visible = false;
+        }
     }
 }
