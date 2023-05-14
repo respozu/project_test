@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -1851942264681107616}
   - component: {fileID: 1368639002178667088}
   m_Layer: 0
-  m_Name: Tennis Ball
+  m_Name: TennisBall
   m_TagString: TennisBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
